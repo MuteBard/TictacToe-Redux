@@ -9,11 +9,11 @@ import * as ReactRedux from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 
 // import all components and their reducers here
-import tttContainer from './TTT/TTT';
-import tttReducer from './TTT/TTT.reducer';
+import TTTContainer from './TTT/TTT';
+import TTTReducer from './TTT/TTT.reducer';
 
 const reducer = Redux.combineReducers({
-  TicTacToe: tttReducer
+  TicTacToe: TTTReducer
 })
 
 const store = Redux.createStore(
@@ -21,11 +21,13 @@ const store = Redux.createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+
+
 ReactDOM.render(
   <ReactRedux.Provider store={store}>
       <div className="boardContainer">
-       <div className="title">Tic-Tac-Toe using React + Redux</div>
-       <tttContainer/>
+        <div className="title">Tic-Tac-Toe using React + Redux</div>
+        <TTTContainer/>
       </div>
   </ReactRedux.Provider>,
   document.getElementById('root')

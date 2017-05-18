@@ -4,12 +4,12 @@
 export function select(idx) {
   return {
     type: 'move',
-    index: idx
-  }
+    cell: idx
+  };
 }
 
 export function restart(){
   return{
-    type: 'move'
-  }
+    type: 'restart'
+  };
 }
