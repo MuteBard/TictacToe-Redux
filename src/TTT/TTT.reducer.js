@@ -55,6 +55,9 @@ export default function tttReducer(state = INITIAL_STATE, action){
         }
 
 
+
+
+
   }
   //when the restart button is pressed apply the inital State but countinue to pass in the score board
   if (action.type==='restart'){
